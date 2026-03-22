@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>7LumeStudio | High-Converting Web Design & Landing Pages</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+--bg:#ffffff;
+--text:#0f172a;
+--muted:#475569;
+--primary:#2563eb;
+--accent:#10b981;
+--border:#e5e7eb;
+}
+
+*{box-sizing:border-box}
+body{
+margin:0;
+font-family:'Inter',sans-serif;
+color:var(--text);
+background:var(--bg);
+line-height:1.6;
+scroll-behavior:smooth;
+}
+
+a{text-decoration:none;color:inherit}
+.container{max-width:1100px;margin:auto;padding:0 20px}
+
+/* NAVBAR */
+.navbar{
+position:sticky;
+top:0;
+background:rgba(255,255,255,0.7);
+backdrop-filter:blur(14px);
+border-bottom:1px solid var(--border);
+z-index:1000;
+}
+
+.navbar-inner{
+display:flex;
+justify-content:space-between;
+align-items:center;
+height:70px;
+}
+
+.nav a{
+margin-left:20px;
+color:var(--muted);
+font-weight:500;
+position:relative;
+}
+
+.nav a::after{
+content:"";
+position:absolute;
+left:0;bottom:-4px;
+width:0;height:2px;
+background:var(--primary);
+transition:.3s;
+}
+
+.nav a:hover::after{width:100%}
+
+.btn{
+padding:12px 18px;
+border-radius:10px;
+display:inline-block;
+transition:0.3s;
+font-weight:500;
+}
+
+.btn-primary{
+background:linear-gradient(135deg,#2563eb,#3b82f6);
+color:#ffffff;
+box-shadow:0 10px 25px rgba(37,99,235,0.35);
+letter-spacing:0.3px;
+}
+
+.btn-primary:hover{
+transform:translateY(-3px) scale(1.02);
+box-shadow:0 20px 40px rgba(37,99,235,0.4);
+}
+
+/* Navbar CTA special style */
+.nav .btn-primary{
+padding:10px 16px;
+border-radius:999px;
+font-size:14px;
+color:#ffffff !important;
+}
+
+.nav .btn-primary:hover{
+transform:translateY(-2px) scale(1.05);
+}
+
+.btn-primary:hover{
+transform:translateY(-3px);
+box-shadow:0 15px 30px rgba(37,99,235,0.35);
+}
+
+/* HERO */
+.hero{
+padding:120px 0;
+text-align:center;
+position:relative;
+}
+
+.hero h1{
+font-size:48px;
+max-width:800px;
+margin:auto;
+}
+
+.hero p{
+color:var(--muted);
+margin:20px auto;
+max-width:600px;
+}
+
+/* TRUST */
+.trust{
+display:flex;
+justify-content:space-around;
+padding:30px 0;
+border-top:1px solid var(--border);
+border-bottom:1px solid var(--border);
+font-weight:500;
+}
+
+/* SECTIONS */
+.section{padding:90px 0}
+.section h2{text-align:center;margin-bottom:40px}
+
+.grid{display:grid;gap:25px;justify-content:center}
+.grid-3{
+  grid-template-columns:repeat(auto-fit, minmax(280px, 320px));
+  justify-content:center;
+}
+
+/* CARD */
+.card{
+border:1px solid var(--border);
+padding:25px;
+border-radius:18px;
+background:#fff;
+transition:0.4s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+box-shadow:0 20px 50px rgba(0,0,0,0.08);
+}
+
+/* PROJECT CARDS PREMIUM */
+.project-card{
+overflow:hidden;
+border-radius:18px;
+border:1px solid var(--border);
+background:#fff;
+transition:0.4s;
+position:relative;
+}
+
+.project-card:hover{
+transform:translateY(-10px);
+box-shadow:0 25px 60px rgba(0,0,0,0.12);
+}
+
+.project-image{
+height:260px;
+overflow:hidden;
+position:relative;
+}
+
+.project-image img{
+width:100%;
+display:block;
+transition:transform 1.2s cubic-bezier(.22,.61,.36,1);
+}
+
+/* scroll effect */
+.project-card:hover .project-image img{
+transform:translateY(-45%);
+}
+
+/* gradient overlay */
+.project-image::after{
+content:"";
+position:absolute;
+inset:0;
+background:linear-gradient(to bottom,transparent 60%,rgba(0,0,0,0.5));
+opacity:.6;
+}
+
+.project-content{
+padding:22px;
+}
+
+.project-content h3{
+margin:0 0 8px;
+}
+
+.project-content p{
+color:var(--muted);
+font-size:14px;
+margin-bottom:14px;
+}
+
+/* CTA */
+.cta{
+background:linear-gradient(135deg,#0f172a,#1e293b);
+color:#fff;
+padding:70px 20px;
+text-align:center;
+border-radius:24px;
+box-shadow:0 25px 60px rgba(0,0,0,0.25);
+}
+
+/* FORM */
+.form{
+max-width:500px;
+margin:auto;
+display:grid;
+gap:12px;
+}
+
+.input,textarea{
+padding:14px;
+border:1px solid var(--border);
+border-radius:12px;
+font-size:14px;
+background:#f8fafc;
+transition:all 0.3s ease;
+}
+
+.input:focus,textarea:focus{
+outline:none;
+border-color:var(--primary);
+background:#ffffff;
+box-shadow:0 0 0 3px rgba(37,99,235,0.15);
+}
+
+footer{
+text-align:center;
+padding:30px 20px;
+color:#94a3b8;
+font-size:14px;
+border-top:1px solid var(--border);
+margin-top:40px;
+background:#f8fafc;
+}
+
+/* ANIMATION */
+.reveal{
+opacity:0;
+transform:translateY(40px);
+transition:1s;
+}
+
+.reveal.active{
+opacity:1;
+transform:translateY(0);
+}
+
+@media(max-width:768px){
+.grid-3{grid-template-columns:1fr}
+.trust{flex-direction:column;gap:10px;text-align:center}
+.hero h1{font-size:32px}
+}
+</style>
+</head>
+<body>
+
+<header class="navbar">
+<div class="container navbar-inner">
+<div><strong>7LumeStudio</strong></div>
+<nav class="nav">
+<a href="#services">Services</a>
+<a href="#work">Work</a>
+<a href="#contact" class="btn btn-primary">Get Audit</a>
+</nav>
+</div>
+</header>
+
+<section class="hero reveal">
+<div style="position:absolute;inset:0;z-index:-1;opacity:0.08;background:url('https://images.unsplash.com/photo-1492724441997-5dc865305da7?auto=format&fit=crop&w=1600&q=80') center/cover;"></div>
+<div class="container">
+<h1>Websites That Turn Visitors Into Paying Customers</h1>
+<p>I help small businesses build high-converting websites that generate leads and grow revenue.</p>
+<a href="#contact" class="btn btn-primary">Get a Website Audit</a>
+</div>
+</section>
+
+<section class="trust reveal">
+<div>25+ Projects</div>
+<div>15+ Clients</div>
+<div>Up to 3x Conversions</div>
+</section>
+
+<section id="services" class="section reveal">
+<div class="container">
+<h2>How I Help</h2>
+<div class="grid grid-3">
+<div class="card"><h3>Business Websites</h3><p>Designed to convert visitors into customers.</p></div>
+<div class="card"><h3>Landing Pages</h3><p>Turn traffic into leads.</p></div>
+<div class="card"><h3>Redesign</h3><p>Improve your current site performance.</p></div>
+</div>
+</div>
+</section>
+
+<section id="work" class="section reveal">
+<div class="container">
+<h2>Selected Work</h2>
+<div class="grid grid-3">
+
+<div class="project-card">
+<div class="project-image">
+<img src="assets/gymImage.png" alt="Gym Website">
+</div>
+<div class="project-content">
+<h3>Gym Website</h3>
+<p>Designed to increase memberships and engagement.</p>
+<a href=".demos/gym/index.html" class="btn btn-primary">View Live</a>
+</div>
+</div>
+
+<div class="project-card">
+<div class="project-image">
+<img src="assets/saasImage.png" alt="SaaS Dashboard">
+</div>
+<div class="project-content">
+<h3>SaaS Landing Page</h3>
+<p>Focused on improving trial signups and clarity.</p>
+<a href=".demos/saas/index.html" class="btn btn-primary">View Live</a>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+<section class="section reveal">
+<div class="container">
+<div class="cta">
+<h2>Ready to Get More Leads?</h2>
+<p>Let’s improve your website and grow your business.</p>
+<a href="#contact" class="btn btn-primary">Book Free Consultation</a>
+</div>
+</div>
+</section>
+
+<section id="contact" class="section reveal">
+<div class="container">
+<h2>Contact</h2>
+<form class="form" action="https://formspree.io/f/xzdjqqve" method="POST">
+<input class="input" name="name" placeholder="Name" required>
+<input class="input" type="email" name="email" placeholder="Email" required>
+<textarea name="message" placeholder="Your project" required></textarea>
+<button class="btn btn-primary">Send Message</button>
+
+</form>
+</div>
+</section>
+
+<footer>© 2026 7LumeStudio</footer>
+
+<script>
+const reveals=document.querySelectorAll('.reveal');
+window.addEventListener('scroll',()=>{
+  reveals.forEach(el=>{
+    const top=el.getBoundingClientRect().top;
+    if(top<window.innerHeight-100){el.classList.add('active');}
+  });
+});
+</script>
+
+</body>
+</html>
