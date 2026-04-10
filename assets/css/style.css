@@ -25,7 +25,7 @@ header {
     display: flex;
     align-items: flex-start; 
     /* 1. Mobile First: Load a smaller/optimized version by default */
-    background-image: url('../img/ui/hero-mobile.webp'); 
+    background-image: url('../img/ui/hero-full.webp'); 
     background-size: cover;
     background-position: center bottom;
     background-repeat: no-repeat;
