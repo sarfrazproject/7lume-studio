@@ -1,0 +1,91 @@
+/* --- Global Typography & Branding --- */
+body { 
+    font-family: 'Inter', sans-serif; 
+}
+
+.logo-gradient {
+    background: linear-gradient(90deg, #2DD4BF 0%, #581C87 100%);
+    -webkit-background-clip: text;
+    background-clip: text; /* Standard property for compatibility */
+    -webkit-text-fill-color: transparent;
+}
+
+.btn-gradient {
+    background: linear-gradient(90deg, #2DD4BF 0%, #581C87 100%);
+}
+
+header {
+    z-index: 100;
+}
+
+/* --- Hero Section Styles --- */
+.hero-full {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    /* Changed to flex-start to allow the pt-40 padding to control the top gap */
+    align-items: flex-start; 
+    background-image: url('../img/ui/hero-full.png');
+    background-size: cover;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+/* Overlay that ensures text is readable on the left while showing the image on the right */
+.hero-full::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.95) 25%, rgba(255, 255, 255, 0.8) 45%, rgba(255, 255, 255, 0) 100%);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 10;
+}
+
+/* --- Mobile Menu & UI Fixes --- */
+#mobile-menu {
+    z-index: 90; /* Lower than the header (100) */
+    background-image: radial-gradient(circle at top right, rgba(45, 212, 191, 0.1), white);
+    /* Add this to prevent it from blocking clicks when closed */
+    visibility: hidden; 
+    transition: transform 0.5s ease-in-out, visibility 0.5s;
+}
+
+#mobile-menu:not(.translate-x-full) {
+    visibility: visible;
+}
+
+#menu-btn { 
+    z-index: 110; /* Ensure this is the highest element */
+    position: relative;
+    cursor: pointer;
+}
+
+.overflow-hidden { 
+    overflow: hidden; 
+    height: 100vh; 
+}
+
+#hamburger span {
+    transition: all 0.3s ease-in-out;
+}
+
+/* Hero Blob Animations */
+@keyframes blob {
+    0% { transform: translate(0px, 0px) scale(1); }
+    33% { transform: translate(30px, -50px) scale(1.1); }
+    66% { transform: translate(-20px, 20px) scale(0.9); }
+    100% { transform: translate(0px, 0px) scale(1); }
+}
+
+.animate-blob { 
+    animation: blob 7s infinite; 
+}
+
+.animation-delay-2000 { 
+    animation-delay: 2s; 
+}

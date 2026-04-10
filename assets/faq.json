@@ -1,0 +1,63 @@
+[
+  {
+    "question": "How long does a typical digital deployment take?",
+    "answer": "For industrial landing pages, we typically deploy within 10-14 days. Custom enterprise platforms for equipment rental or logistics usually take 4-6 weeks.",
+    "category": "Project"
+  },
+  {
+    "question": "Do I own the source code and digital assets?",
+    "answer": "Yes. At 7LumeStudio, we transfer 100% of the intellectual property and source code to your enterprise upon final settlement. No hidden lock-ins.",
+    "category": "Ownership"
+  },
+  {
+    "question": "Are your websites optimized for GCC and Indian industrial sites?",
+    "answer": "Absolutely. We engineer for 'Field Performance,' ensuring fast load times on 4G/LTE networks in construction zones across Dubai, Riyadh, and Mumbai.",
+    "category": "Performance"
+  },
+  {
+    "question": "What is included in a Free Technical Audit?",
+    "answer": "We perform a deep-dive into your current site's speed, security gaps, and SEO ranking to identify exactly where you are losing potential high-value leads.",
+    "category": "Services"
+  },
+
+  {
+    "question": "How much does a professional website cost in 2026?",
+    "answer": "Costs vary based on complexity. A high-performance landing page typically starts at a different tier than a full enterprise equipment rental platform. At 7LumeStudio, we provide transparent, value-based pricing with no hidden monthly fees.",
+    "category": "Business"
+  },
+  {
+    "question": "What is the difference between a custom-coded site and a template?",
+    "answer": "Templates are faster to deploy but often bloated with slow code. Custom-coded sites offer superior speed, better SEO rankings, and 100% design flexibility for your brand.",
+    "category": "Development"
+  },
+  {
+    "question": "How long does it take for a new website to rank on Google?",
+    "answer": "SEO is a marathon. While technical SEO is built-in from day one, significant ranking shifts in competitive markets like Dubai or Mumbai usually take 3 to 6 months of consistent content and authority building.",
+    "category": "SEO"
+  },
+  {
+    "question": "Will my website be ready for AI-search and Voice Search?",
+    "answer": "Yes. We implement Schema Markup and structured data so that AI assistants (like Gemini and Siri) can accurately pull your business information and services into conversational results.",
+    "category": "SEO"
+  },
+  {
+    "question": "What is a 'Mobile-First' design and why is it mandatory?",
+    "answer": "Google uses mobile-first indexing, meaning it ranks your site based on the mobile version. We ensure your site is fast and touch-friendly for field workers and clients using smartphones in industrial zones.",
+    "category": "Performance"
+  },
+  {
+    "question": "What is a Technical Audit and why does my business need one?",
+    "answer": "A Technical Audit identifies hidden 'leaks' in your site—like slow load times or broken metadata—that are causing you to lose potential clients to competitors.",
+    "category": "Strategy"
+  },
+  {
+    "question": "Do I own my website and source code 100%?",
+    "answer": "Absolutely. Upon project completion, 7LumeStudio transfers all IP rights and source code to you. You are never 'locked-in' to our agency.",
+    "category": "Ownership"
+  },
+  {
+    "question": "Do you provide maintenance after the website launch?",
+    "answer": "Yes. We offer dedicated maintenance tiers that include security patches, speed optimization, and content updates to keep your infrastructure running at peak performance.",
+    "category": "Support"
+  }
+]
