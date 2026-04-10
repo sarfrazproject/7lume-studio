@@ -6,7 +6,7 @@ body {
 .logo-gradient {
     background: linear-gradient(90deg, #2DD4BF 0%, #581C87 100%);
     -webkit-background-clip: text;
-    background-clip: text; /* Standard property for compatibility */
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
@@ -23,16 +23,24 @@ header {
     position: relative;
     min-height: 100vh;
     display: flex;
-    /* Changed to flex-start to allow the pt-40 padding to control the top gap */
     align-items: flex-start; 
-    background-image: url('../img/ui/hero-full.png');
+    /* 1. Mobile First: Load a smaller/optimized version by default */
+    background-image: url('../img/ui/hero-mobile.webp'); 
     background-size: cover;
     background-position: center bottom;
     background-repeat: no-repeat;
     overflow: hidden;
+    /* 2. Set a solid background color to improve LCP speed */
+    background-color: #ffffff; 
 }
 
-/* Overlay that ensures text is readable on the left while showing the image on the right */
+/* 3. Load the high-res desktop version only for larger screens */
+@media (min-width: 1024px) {
+    .hero-full {
+        background-image: url('../img/ui/hero-full.webp');
+    }
+}
+
 .hero-full::before {
     content: "";
     position: absolute;
@@ -48,9 +56,8 @@ header {
 
 /* --- Mobile Menu & UI Fixes --- */
 #mobile-menu {
-    z-index: 90; /* Lower than the header (100) */
+    z-index: 90;
     background-image: radial-gradient(circle at top right, rgba(45, 212, 191, 0.1), white);
-    /* Add this to prevent it from blocking clicks when closed */
     visibility: hidden; 
     transition: transform 0.5s ease-in-out, visibility 0.5s;
 }
@@ -60,7 +67,7 @@ header {
 }
 
 #menu-btn { 
-    z-index: 110; /* Ensure this is the highest element */
+    z-index: 110;
     position: relative;
     cursor: pointer;
 }
