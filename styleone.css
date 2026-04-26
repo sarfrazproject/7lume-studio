@@ -25,7 +25,7 @@ header {
     display: flex;
     align-items: flex-start; 
     /* 1. Mobile First: Load a smaller/optimized version by default */
-    background-image: url('../img/ui/hero-full.webp'); 
+    background-image: url('assets/img/ui/hero-full.webp'); 
     background-size: cover;
     background-position: center bottom;
     background-repeat: no-repeat;
@@ -37,7 +37,7 @@ header {
 /* 3. Load the high-res desktop version only for larger screens */
 @media (min-width: 1024px) {
     .hero-full {
-        background-image: url('../img/ui/hero-full.webp');
+        background-image: url('assets/img/ui/hero-full.webp');
     }
 }
 
