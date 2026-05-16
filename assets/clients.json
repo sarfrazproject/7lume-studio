@@ -16,7 +16,11 @@
         "logo": "assets/img/clients/client4.png"
     },
     {
-        "name": "Thawabit al jazeera",
+        "name": "Thawabit Al Jazeera",
         "logo": "assets/img/clients/client5.png"
+    },
+    {
+        "name": "Arbah Al Hijaz",
+        "logo": "assets/img/clients/client6.png"
     }
 ]
