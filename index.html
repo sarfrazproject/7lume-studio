@@ -8,10 +8,9 @@
 
     <link rel="preload" as="image" href="assets/img/ui/hero-full.webp" fetchpriority="high">
 
-    <link rel="stylesheet" href="styleone.css">
     <link rel="stylesheet" href="style.css">
 
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" as="style" crossorigin>
     <link rel="icon" type="image/png" href="assets/img/favicon/favicon-96x96.png" sizes="96x96">
     <link rel="icon" type="image/svg+xml" href="assets/img/favicon/favicon.svg">
     <link rel="shortcut icon" href="assets/img/favicon/favicon.ico">
@@ -163,7 +162,7 @@
     </section>
 
     <div id="footer-placeholder"></div>
-    <script src="assets/js/main.js"></script>
-    <script src="assets/js/counter.js"></script>
+    <script src="assets/js/main.js" defer></script>
+    <script src="assets/js/counter.js" defer></script>
 </body>
 </html>
